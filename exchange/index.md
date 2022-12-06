@@ -38,8 +38,8 @@ EVT(Encrypted Variable Token) 是一个在元宇宙和现实世界可以替代NF
   </tr>
   <tr>
     <td>使用案例</td>
-    <td>数字艺术品，例如：Cryptopunks, Bored Ape Yacht Club(BYAC)</td>
-    <td>电影和音乐版权交易、流媒体、游戏、元宇宙、数字门票等</td>
+    <td>数字艺术品，门票，例如：Cryptopunks, Bored Ape Yacht Club(BYAC)</td>
+    <td>电影、音乐版权保护，私密文件、隐私数据交易，元宇宙人物、道具属性可升级</td>
   </tr>
 </table>
 
