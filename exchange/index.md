@@ -71,6 +71,9 @@
 
 ## 四. NewPlayer SDK
 
+- [Android-sdk & demo](https://gitlab.weinvent.org/wave/business/wave-websites/evt-player-android)
+- [iOS-sdk & demo](https://gitlab.weinvent.org/wave/business/wave-websites/evt-player-ios)
+
 ## 五. EVT-lib
 
 ## 六. 更新记录
