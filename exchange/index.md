@@ -65,15 +65,27 @@ EVT是 Encrypted Variable Token的简称。EVT是由JZ Xu提出的代币标准�
 
 ### 总体架构介绍
 
-L1: Newton区块链，EVT智能合约，负责 EVT 的发行、转移、销毁等
+* L1: Newton区块链
 
-L2: 去中心化存储，加密后的数据存储在去中心化存储上，例如IPFS
+  EVT智能合约，负责 EVT 的发行、转移、销毁等。
 
-L3: NewKeeper，管理密钥，当收到用户密钥请求时，通过智能合约进行鉴权，返回密钥给用户
+* L2: 去中心化存储
 
-L4: SDK，部署 EVT，与 Newton 区块链交互
+  加密后的数据存储在去中心化存储上。
 
-L5: 应用层，第三方集成EVT，例如 Metamask 购买 EVT，Wave客户端发行，NewPlayer 播放器等
+* L3: NewKeeper
+
+  去中心化密钥管理。当收到用户密钥请求时，通过智能合约进行鉴权，返回密钥给用户。
+
+* L4: SDK
+
+  EVT发行，与 Newton 区块链和NewKeeper进行交互。
+
+* L5: 应用层
+
+  应用集成EVT，例如 Metamask 购买 EVT，Wave客户端发行和交易EVT资产，huobi app交易EVT资产等。
+
+
 
 ### EVT 工作流程
 #### 概述
