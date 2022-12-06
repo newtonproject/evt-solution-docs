@@ -2,10 +2,10 @@
 
 ## 一. 介绍
 
-### 1. EVT是什么
+### 1.1 EVT是什么
 EVT是 Encrypted Variable Token的简称。EVT是由JZ Xu提出的代币标准，用于在元宇宙、数字出版、现实世界中加密可变资产发行。同时，EVT也定义了一套去中心化协议和架构，是Web3的基础设施。
 
-### 2. EVT vs NFT
+### 1.2 EVT vs NFT
 
 <table>
   <tr>
@@ -43,7 +43,7 @@ EVT是 Encrypted Variable Token的简称。EVT是由JZ Xu提出的代币标准�
 </table>
 
 
-### 3. 应用场景
+### 1.3 应用场景
 任何使用加密和可变内容的DApp都可以运用EVT标准和技术，典型的包括：
 * 影视资产
 * 隐私资产
@@ -56,7 +56,7 @@ EVT是 Encrypted Variable Token的简称。EVT是由JZ Xu提出的代币标准�
 
 ![evt-infrastructure](../res/evt-infrastructure.png)
 
-### 1. 总体架构介绍
+### 2.1 总体架构介绍
 
 * L1: Newton区块链
 
@@ -78,50 +78,54 @@ EVT是 Encrypted Variable Token的简称。EVT是由JZ Xu提出的代币标准�
 
   应用集成EVT，例如 Metamask 购买 EVT，Wave客户端发行和交易EVT资产，huobi app交易EVT资产等。
 
-### 2. EVT 工作流程
+### 2.2 EVT 工作流程
 - 电影等资源经过切片加密后，上传到IPFS，发行方经过加密通道，将加密密钥交给 NewKeeper，同时在 Newton 上部署电影 EVT 合约。
 
 - 当用户购买 EVT，请求观看电影时，会发送密钥请求给 Newkeeper，Newkeeper 通过智能合约检查用户是否持有 EVT，如果持有，返回加密密钥给用户，用户通过 火必客户端、Wave客户端、NewPlayer 播放器等进行解密播放。
 
 ## 三. 集成方案
 
-### 1. 业务流程
+### 3.1 业务流程
 ![evt_flow](../res/evt-uml.png)
 
-### 2. 接入指南
+### 3.2 接入指南
 
-#### 2.1 申请 gitlib 账号（提供使用者邮箱，以便下载客户端 SDK）
+1. 申请 gitlib 账号（提供使用者邮箱，以便下载客户端 SDK）
 
-#### 2.1 申请 NewKeeper 使用的 App_key 和 App_secret （提供申请信息和邮箱）
+2. 申请 NewKeeper 使用的 App_key 和 App_secret （提供申请信息和邮箱）
 
-#### 2.2 提供 NEW 钱包地址（Mint EVT 到该地址，使地址具有访问 NewKeeper 的权限）
+3. 提供 NEW 钱包地址（Mint EVT 到该地址，使地址具有访问 NewKeeper 的权限）
 
-#### 2.3 客户端下载 NewPlayer SDK 并集成到 APP
+4. 客户端下载 NewPlayer SDK 并集成到 APP
 
-- [Android SDK & demo](https://gitlab.weinvent.org/weinvent/incubator/evt-integration/evt-player-android)
-- [iOS SDK & demo](https://gitlab.weinvent.org/weinvent/incubator/evt-integration/evt-player-ios)
+   - [Android SDK & demo](https://gitlab.weinvent.org/weinvent/incubator/evt-integration/evt-player-android)
 
-#### 2.4 服务端请求 NewKeeper 获取 Secretkey 并返回到客户端
+   - [iOS SDK & demo](https://gitlab.weinvent.org/weinvent/incubator/evt-integration/evt-player-ios)
 
-- [NewKeeper API & demo](https://gitlab.weinvent.org/weinvent/incubator/evt-integration/evt-integration-newkeeper)
 
-#### 2.5 客户端从 EVT Token URI 中解析出资源播放链接（目前由 EVT-Core 直接提供）
+5. 服务端请求 NewKeeper 获取 Secretkey 并返回到客户端
+   - [NewKeeper API & demo](https://gitlab.weinvent.org/weinvent/incubator/evt-integration/evt-integration-newkeeper)
 
-- [EVT Token URI 解析](tokenUri.md)
 
-#### 2.5 客户端使用播放链接和 SecretKey 进行解密媒体资源并播放
+6. 客户端从 EVT Token URI 中解析出资源播放链接（目前由 EVT-Core 直接提供）
+   - [EVT Token URI 解析](https://gitlab.weinvent.org/weinvent/incubator/evt-integration/evt-solution-docs/-/blob/master/exchange/tokenUri.md)
 
-### 3. 现有EVT方案的通用性和局限性
 
-通用性：现有EVT方案为原创作者、内容运营机构提供了完善的版权保护和变现的通用解决方案。
+7. 客户端使用播放链接和 SecretKey 进行解密媒体资源并播放
 
-局限性：NewPlayer 目前只支持 Android 和 iOS 端，未来会增加对 Web 端的支持。
+### 3.3 现有EVT方案的通用性和局限性
+
+- 通用性：现有EVT方案为原创作者、内容运营机构提供了完善的版权保护和变现的通用解决方案。
+
+- 局限性：NewPlayer 目前只支持 Android 和 iOS 端，未来会增加对 Web 端的支持。
 
 ## 四. EVT Specs
 
-- [EVT Specs](evt-specs.md)
+- [EVT Specs](https://gitlab.weinvent.org/weinvent/incubator/evt-integration/evt-solution-docs/-/blob/master/exchange/evt-specs.md)
 
 ## 五. 更新记录
+
+- v1 2022-12-07
 
 ## 六. 引用
 
