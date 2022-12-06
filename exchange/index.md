@@ -112,8 +112,7 @@ EVT是 Encrypted Variable Token的简称。EVT是由JZ Xu提出的代币标准�
 5. 服务端请求 NewKeeper 获取 Secretkey 并返回到客户端
    - [NewKeeper API & demo](https://gitlab.weinvent.org/weinvent/incubator/evt-integration/evt-integration-newkeeper)
 
-
-7. 客户端使用播放链接和 SecretKey 进行解密媒体资源并播放
+6. 客户端使用播放链接和 SecretKey 进行解密媒体资源并播放
 
 ### 3.3 媒体资源数据结构
 
@@ -127,7 +126,7 @@ EVT是 Encrypted Variable Token的简称。EVT是由JZ Xu提出的代币标准�
 
 ## 4. 更新记录
 
-- v1 2022-12-07
+- v1.0 2022-12-07
 
 ## 5. 引用
 
