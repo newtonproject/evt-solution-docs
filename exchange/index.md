@@ -53,11 +53,11 @@ EVT(Encrypted Variable Token) 是一个在元宇宙和现实世界可以替代NF
 
 ### 3. 应用场景
 
-我们设想的EVT应用场景有影视资产、隐私资产、数字身份。你可以设想出EVT更多样的应用：
+我们设想的EVT应用场景有影视资产、隐私资产、数字身份。你可以设想出EVT更多的应用场景：
 
 - 元宇宙 - 建筑、虚拟形象、鲜花、动物
 - 物质资产 - 房屋、艺术品、电影、门票
-- 负债资产 - 借贷、义务和其他责任
+- 负资产 - 借贷、负债和其他责任
 
 ## 二. 总体架构
 
@@ -141,3 +141,5 @@ L5: NewPlayer 播放器、Wave客户端: 负责 EVT 播放
 ## 七. 引用
 
 https://neps.newtonproject.org/neps/nep-53/
+
+https://neps.newtonproject.org/neps/nep-7/
