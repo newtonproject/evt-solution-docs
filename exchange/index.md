@@ -107,9 +107,6 @@ L5: 应用层，第三方集成EVT，例如 Metamask 购买 EVT，Wave客户端�
 ### 2. 接入示例
 
 [Token Uri](tokenUri.md)
-- 如何解析EVT合约
-  - 解析 tokenUri demo @wangyifan
-  - 媒体资源格式说明文档,   @Alen, @Minter,
 
 
 ## 三. NewKeepr API
