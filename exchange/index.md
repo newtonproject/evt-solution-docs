@@ -138,7 +138,101 @@ L5: NewPlayer 播放器、Wave客户端: 负责 EVT 播放
 - [Android-sdk & demo](https://gitlab.weinvent.org/wave/business/wave-websites/evt-player-android)
 - [iOS-sdk & demo](https://gitlab.weinvent.org/wave/business/wave-websites/evt-player-ios)
 
-## 五. EVT-lib
+## 五. Contract
+
+SecureMovie
+```
+SecureMovie is ISecureMovie, EVT, ERC721URIStorage, ERC721Enumerable, Ownable
+
+event MovieCopyCreate(uint256 indexed movieId);
+event TicketBind(uint256 indexed movieId, address indexed tickets);
+event DefaultURIUpdate(string uri);
+
+function safeMint(address to, uint256 amount) external;
+function getMovieTicketContracts(uint256 movieId) external view returns(address[] memory ticketsSet);
+function tickets2movie(address tickets) external view returns(uint256 movieId);
+function updateDefaultURI(string memory uri) external;
+function registerTicketContract(uint256 movieId, address tickets) external;
+function withdraw()
+function tokenURI(uint256 tokenId)
+```
+
+### MovieCopyCreate(uint256 indexed movieId)
+
+Emitted when `tokenId` EVT is created.
+
+### TicketBind(uint256 indexed movieId, address indexed tickets)
+
+Emitted when ticket bind with movie
+
+### DefaultURIUpdate(string uri)
+Emitted when `defaultURI` Update
+
+### safeMint(address to, uint256 amount)
+
+Batch mint movies.
+
+### getMovieTicketContracts(uint256 movieId) -> string[]
+
+Returns `movieId` to TicketSet.
+
+### tickets2movie(address tickets) -> uint256
+Returns `movieId`
+
+### updateDefaultURI(string memory uri)'
+Update `defaultURI` 
+
+### registerTicketContract(uint256 movieId, address tickets)
+add ticket contract address to `_movie2TicketsSet`
+
+### withdraw()
+withdrawal of balance
+
+### tokenURI(uint256 tokenId)
+Returns token URIStorage.See {IERC721Metadata-tokenURI}.
+
+
+EVT
+```
+EVT is ERC165, ERC721, EVTVariable, IEVT
+
+event DynamicPropertyUpdated(uint256 tokenId, bytes32 propertyId, bytes propertyValue);
+
+function setDynamicProperty(uint256 tokenId, bytes32 propertyId, bytes memory propertyValue) external payable;
+
+function setDynamicProperties(uint256 tokenId, bytes memory message) external payable;
+
+function getProperty(uint256 tokenId, bytes32 propertyId) external view returns (bytes memory propertyValue);
+
+function getProperties(uint256 tokenId) external view returns (bytes32[] memory ids, bytes[] memory properties);
+
+function supportsProperty(bytes32 propertyId) external view returns (bool);
+```
+
+### event DynamicPropertyUpdated(uint256 tokenId, bytes32 propertyId, bytes propertyValue)
+Emitted when dynamic property updated.
+
+### setDynamicProperty(uint256 tokenId, bytes32 propertyId, bytes memory propertyValue) external payable
+@dev Set the `propertyValue` by `tokenId` and `propertyId`.
+propertyId = bytes32(keccak256('propertyName')) 
+Requirements:
+ - `tokenId` must exist.
+
+### getProperty(uint256 tokenId, bytes32 propertyId) -> bytes
+Returns the `propertyValue` of the `propertyId` token.
+Requirements:
+- `tokenId` must exist.
+
+### getProperties(uint256 tokenId) -> bytes32[], bytes[]
+Batch returns the tokenIds and properties of the `tokenId` token.
+Requirements:
+ - `tokenId` must exist.
+
+### supportsProperty(bytes32 propertyId) -> bool
+Returns whether the `propertyId` exists.
+
+### ERC721，ERC721URIStorage，ERC721Enumerable，Ownable
+For common methods, see ERC721，ERC721URIStorage，ERC721Enumerable，Ownable.
 
 ## 六. 更新记录
 
