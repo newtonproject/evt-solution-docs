@@ -109,16 +109,16 @@ L5: 应用层，第三方集成EVT，例如 Metamask 购买 EVT，Wave客户端�
 ### 2. 接入指南
 
 
-### 2.1 客户端集成 NewPlayer SDK
+#### 2.1 客户端集成 NewPlayer SDK
 
 - [Android-sdk & demo](https://gitlab.weinvent.org/wave/business/wave-websites/evt-player-android)
 - [iOS-sdk & demo](https://gitlab.weinvent.org/wave/business/wave-websites/evt-player-ios)
 
-### 2.2 服务端接入 `NewKeeper`
+#### 2.2 服务端接入 `NewKeeper`
 
 [NewKeeper API](newkeeper-api.md)
 
-### 2.3 相关文档
+#### 2.3 相关文档
 
 [Token Uri](tokenUri.md)
 
