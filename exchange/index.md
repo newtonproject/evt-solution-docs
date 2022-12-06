@@ -4,9 +4,7 @@
 
 ### 1. EVT是什么
 
-EVT是 Encrypted Variable Token的简称。EVT是由JZ Xu提出的代币标准，用于在元宇宙、数字出版、现实世界中加密可变资产发行。同时，EVT也定义了一套去中心化协议和架构，是Web3的基础设施。
-
-
+EVT(Encrypted Variable Token) 是一个在元宇宙和现实世界可以替代NFT的新型token。
 
 ### 2. EVT vs NFT
 
@@ -40,24 +38,19 @@ EVT是 Encrypted Variable Token的简称。EVT是由JZ Xu提出的代币标准�
   </tr>
   <tr>
     <td>使用案例</td>
-    <td>数字艺术品，例如：Cryptopunks, Bored Ape Yacht Club(BYAC)</td>
-    <td>电影和音乐版权交易、流媒体、游戏、元宇宙、数字门票等</td>
+    <td>数字艺术品，门票，例如：Cryptopunks, Bored Ape Yacht Club(BYAC)</td>
+    <td>电影、音乐版权保护，私密文件、隐私数据交易，元宇宙人物、道具属性可升级</td>
   </tr>
 </table>
 
 
 ### 3. 应用场景
 
-任何使用加密和可变内容的DApp都可以运用EVT标准和技术，典型的包括：
-
-* 影视资产
-* 隐私资产
-* 数字身份
+我们设想的EVT应用场景有影视资产、隐私资产、数字身份。你可以设想出EVT更多的应用场景：
 
 - 元宇宙 - 建筑、虚拟形象、鲜花、动物
-- ....
-
-
+- 物质资产 - 房屋、艺术品、电影、门票
+- 负资产 - 借贷、负债和其他责任
 
 ## 二. 总体架构
 
