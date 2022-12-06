@@ -4,11 +4,60 @@
 
 ### 1. EVT是什么
 
+EVT(Encrypted Variable Token) 是一个在元宇宙和现实世界可以替代NFT的新型token。
+
 ### 2. EVT vs NFT
+
+<table>
+  <tr>
+    <td></td>
+    <td>NFT</td>
+    <td>EVT</td>
+  </tr>
+  <tr>
+    <td>概念</td>
+    <td>Non-FUngible Token</td>
+    <td>Encrypted Variable Token</td>
+  </tr>
+  <tr>
+    <td rowspan = 6>特性</td>
+    <td>不可变，不可编程</td>
+    <td>数据分为可变部分和不可变部分</td>
+  </tr>
+  <tr>
+    <td>兼容 NRC7</td>
+    <td>兼容 NRC7</td>
+  </tr>
+  <tr>
+    <td>NFT中图片、视频、音频是公开的</td>
+    <td>支持多种加密算法，包括AES, ECDSA, RSA, Lattice-Based加密算法等</td>
+  </tr>
+  <tr>
+  	<td>/</td>
+    <td>内建 metadata</td>
+  </tr>
+  <tr>
+    <td>/</td>
+    <td>开发工具</td>
+  </tr>
+  <tr>
+    <td>/</td>
+    <td>行业解决方案</td>
+  </tr>
+  <tr>
+    <td>使用案例</td>
+    <td>数字艺术品，例如：Cryptopunks, Bored Ape Yacht Club(BYAC)</td>
+    <td>电影和音乐版权交易、流媒体、游戏、元宇宙、数字门票等</td>
+  </tr>
+</table>
 
 ### 3. 应用场景
 
-电影、音乐、元宇宙道具、元宇宙虚拟形象等
+我们设想的EVT应用场景有影视资产、隐私资产、数字身份。你可以设想出EVT更多样的应用：
+
+- 元宇宙 - 建筑、虚拟形象、鲜花、动物
+- 物质资产 - 房屋、艺术品、电影、门票
+- 负债资产 - 借贷、义务和其他责任
 
 ## 二. 总体架构
 
@@ -31,7 +80,7 @@
 
 #### EVT 合约发行
 
-由 EVT-Core 联合资源方发行 EVT， 上传至 IPFS, 同时创建 EVT Contact，由合作方同步资源信息至合作方 CDN
+由 EVT-Core 联合资源方发行 EVT， 上传至 IPFS，同时创建 EVT Contact，由合作方同步资源信息至合作方 CDN。
 
 
 #### Mint EVT
@@ -41,7 +90,7 @@
 
 #### 维护 EVT 播放列表
 
-由交易所维护 EVT 播放列表
+由交易所维护 EVT 播放列表。
 
 
 #### 用户购买 EVT
@@ -76,3 +125,5 @@
 ## 六. 更新记录
 
 ## 七. 引用
+
+https://neps.newtonproject.org/neps/nep-53/
