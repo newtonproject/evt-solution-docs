@@ -1,5 +1,7 @@
 # EVT Specs
 
+Moive EVT supports the following interfaces
+
 ### Variable Interfaces
 
 ```
@@ -90,7 +92,7 @@ interface EVTEncryption {
 }
 ```
 
-### ERC721 Interfaces，
+### ERC721 Interfaces
 
 - [erc721#IERC721](https://docs.openzeppelin.com/contracts/4.x/api/token/erc721#IERC721)
 
