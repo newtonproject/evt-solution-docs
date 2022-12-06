@@ -100,7 +100,7 @@ EVT是 Encrypted Variable Token的简称，EVT可以用于在元宇宙、数字�
 
 3. 提供接收 EVT 到 NEW 钱包地址
 
-   EVT-Core 铸造 EVT 到该地址，使地址具有从 NewKeeper获取 SecretKey 的权限
+   EVT-Core 铸造 EVT 到该地址，使地址具有从 NewKeeper 获取 SecretKey 的权限
 
 4. 客户端下载 NewPlayer SDK 并集成到 APP
 
@@ -108,8 +108,8 @@ EVT是 Encrypted Variable Token的简称，EVT可以用于在元宇宙、数字�
 
    - [iOS SDK & demo](https://gitlab.weinvent.org/weinvent/incubator/evt-integration/evt-player-ios)
 
+5. 服务器端完成 NewKeeper 授权
 
-5. NewKeeper 授权
    - [NewKeeper API & demo](https://gitlab.weinvent.org/weinvent/incubator/evt-integration/evt-integration-newkeeper)
 
 ### 3.3 媒体资源数据结构
