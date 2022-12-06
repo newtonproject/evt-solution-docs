@@ -90,22 +90,26 @@ EVT是 Encrypted Variable Token的简称。EVT是由JZ Xu提出的代币标准�
 
 ### 2. 接入指南
 
-- 向 EVT-Core 申请 App_key 和 App_secret。
-- 创建 NEW 钱包，使用该钱包 Mint EVT（目前由 EVT-Core Mint EVT 到指定地址）。
-- 下载 SDK 并集成到 APP。
+#### 2.1 申请 gitlib 账号（提供使用者邮箱，以便下载客户端 SDK）
 
-#### 2.1 客户端集成 NewPlayer SDK
+#### 2.1 申请 NewKeeper 使用的 App_key 和 App_secret （提供申请信息和邮箱）
+
+#### 2.2 提供 NEW 钱包地址（Mint EVT 到该地址，使地址具有访问 NewKeeper 的权限）
+
+#### 2.3 客户端下载 NewPlayer SDK 并集成到 APP
 
 - [Android-sdk & demo](https://gitlab.weinvent.org/wave/business/wave-websites/evt-player-android)
 - [iOS-sdk & demo](https://gitlab.weinvent.org/wave/business/wave-websites/evt-player-ios)
 
-#### 2.2 服务端接入 NewKeeper
+#### 2.4 服务端请求 NewKeeper 获取 Secretkey 并返回到客户端
 
-[NewKeeper API](https://gitlab.weinvent.org/wave/business/wave-websites/evt-integration-newkeeper)
+- [NewKeeper API](https://gitlab.weinvent.org/wave/business/wave-websites/evt-integration-newkeeper)
 
-#### 2.3 Token URI 解析
+#### 2.5 客户端从 EVT Token URI 中解析出资源播放链接（目前由 EVT-Core 直接提供）
 
-[Token URI 解析](tokenUri.md)
+- [EVT Token URI 解析](tokenUri.md)
+
+#### 2.5 客户端使用播放链接和 SecretKey 进行解密媒体资源并播放
 
 ### 3. 现有EVT方案的通用性和局限性
 
@@ -115,7 +119,7 @@ EVT是 Encrypted Variable Token的简称。EVT是由JZ Xu提出的代币标准�
 
 ## 四. EVT Specs
 
-[EVT Specs](evt-specs.md)
+- [EVT Specs](evt-specs.md)
 
 ## 五. 更新记录
 

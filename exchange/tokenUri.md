@@ -1,4 +1,4 @@
-## Token URI 解析
+## EVT Token URI 解析
 
 #### Token URI 解析出的 metadata json 格式
 
@@ -29,7 +29,7 @@
 - expire_date: 电影版权到期时间
 
 
-#### demo
+#### Demo
 
 ``` python
 import requests
