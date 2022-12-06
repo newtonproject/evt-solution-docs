@@ -1,4 +1,4 @@
-## EVT Token URI 解析
+## 媒体资源数据结构
 
 #### Token URI 解析出的 metadata json 格式
 

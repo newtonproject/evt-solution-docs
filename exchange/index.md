@@ -90,11 +90,17 @@ EVT是 Encrypted Variable Token的简称。EVT是由JZ Xu提出的代币标准�
 
 ### 3.2 接入指南
 
-1. 申请 gitlib 账号（提供使用者邮箱，以便下载客户端 SDK）
+1. 申请 gitlab 账号
 
-2. 申请 NewKeeper 使用的 App_key 和 App_secret （提供申请信息和邮箱）
+   提供使用者邮箱，以便获取文档和客户端 SDK
 
-3. 提供 NEW 钱包地址（Mint EVT 到该地址，使地址具有访问 NewKeeper 的权限）
+2. 申请 NewKeeper 使用的 App_key 和 App_secret 
+
+   提供申请信息和邮箱
+
+3. 提供接收 EVT 到 NEW 钱包地址
+
+   EVT-Core 铸造 EVT 到该地址，使地址具有从 NewKeeper获取 SecretKey 的权限
 
 4. 客户端下载 NewPlayer SDK 并集成到 APP
 
@@ -107,28 +113,26 @@ EVT是 Encrypted Variable Token的简称。EVT是由JZ Xu提出的代币标准�
    - [NewKeeper API & demo](https://gitlab.weinvent.org/weinvent/incubator/evt-integration/evt-integration-newkeeper)
 
 
-6. 客户端从 EVT Token URI 中解析出资源播放链接（目前由 EVT-Core 直接提供）
-   - [EVT Token URI 解析](https://gitlab.weinvent.org/weinvent/incubator/evt-integration/evt-solution-docs/-/blob/master/exchange/tokenUri.md)
-
-
 7. 客户端使用播放链接和 SecretKey 进行解密媒体资源并播放
 
-### 3.3 现有EVT方案的通用性和局限性
+### 3.3 媒体资源数据结构
+
+- [媒体资源数据结构](https://gitlab.weinvent.org/weinvent/incubator/evt-integration/evt-solution-docs/-/blob/master/exchange/tokenUri.md)
+
+### 3.4 现有EVT方案的通用性和局限性
 
 - 通用性：现有EVT方案为原创作者、内容运营机构提供了完善的版权保护和变现的通用解决方案。
 
 - 局限性：NewPlayer 目前只支持 Android 和 iOS 端，未来会增加对 Web 端的支持。
 
-## 4. EVT Specs
-
-- [EVT Specs](https://gitlab.weinvent.org/weinvent/incubator/evt-integration/evt-solution-docs/-/blob/master/exchange/evt-specs.md)
-
-## 5. 更新记录
+## 4. 更新记录
 
 - v1 2022-12-07
 
-## 6. 引用
+## 5. 引用
 
 1. https://neps.newtonproject.org/neps/nep-53/
 
 2. https://neps.newtonproject.org/neps/nep-7/
+
+3. https://www.newtonproject.org/en/evt/
