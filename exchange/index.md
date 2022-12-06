@@ -106,28 +106,29 @@ L5: 应用层，第三方集成EVT，例如 Metamask 购买 EVT，Wave客户端�
 ### 1. 业务流程
 ![huobi_evt](../res/huobi_evt.png)
 
-### 2. 接入示例
-
-[Token Uri](tokenUri.md)
+### 2. 接入指南
 
 
-## 三. NewKeepr API
-
-[NewKeeper API](newkeeper-api.md)
-
-
-## 四. NewPlayer SDK
+### 2.1 客户端集成 NewPlayer SDK
 
 - [Android-sdk & demo](https://gitlab.weinvent.org/wave/business/wave-websites/evt-player-android)
 - [iOS-sdk & demo](https://gitlab.weinvent.org/wave/business/wave-websites/evt-player-ios)
 
-## 五. EVT Specs
+### 2.2 服务端接入 `NewKeeper`
+
+[NewKeeper API](newkeeper-api.md)
+
+### 2.3 相关文档
+
+[Token Uri](tokenUri.md)
+
+## 三. EVT Specs
 
 [EVT Specs](evt-specs.md)
 
-## 六. 更新记录
+## 四. 更新记录
 
-## 七. 引用
+## 五. 引用
 
 https://neps.newtonproject.org/neps/nep-53/
 
