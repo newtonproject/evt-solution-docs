@@ -21,7 +21,7 @@
 ```
 
 - version: 版本
-- type: evt类型，目前有 movie/seris 两种
+- type: evt类型，目前有 movie/series 两种
 - name: evt 名称
 - description: 描述
 - image: 封面图 ipfs 地址
