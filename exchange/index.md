@@ -98,12 +98,12 @@ EVT是 Encrypted Variable Token的简称。EVT是由JZ Xu提出的代币标准�
 
 #### 2.3 客户端下载 NewPlayer SDK 并集成到 APP
 
-- [Android-sdk & demo](https://gitlab.weinvent.org/wave/business/wave-websites/evt-player-android)
-- [iOS-sdk & demo](https://gitlab.weinvent.org/wave/business/wave-websites/evt-player-ios)
+- [Android SDK & demo](https://gitlab.weinvent.org/wave/business/wave-websites/evt-player-android)
+- [iOS SDK & demo](https://gitlab.weinvent.org/wave/business/wave-websites/evt-player-ios)
 
 #### 2.4 服务端请求 NewKeeper 获取 Secretkey 并返回到客户端
 
-- [NewKeeper API](https://gitlab.weinvent.org/wave/business/wave-websites/evt-integration-newkeeper)
+- [NewKeeper API & demo](newkeeper-api.md)
 
 #### 2.5 客户端从 EVT Token URI 中解析出资源播放链接（目前由 EVT-Core 直接提供）
 
