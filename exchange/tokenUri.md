@@ -1,6 +1,6 @@
-## tokenUri 解析
+## Token URI 解析
 
-#### token_uri 解析出的 metadata json 格式
+#### Token URI 解析出的 metadata json 格式
 
 ```python
 {
@@ -55,5 +55,4 @@ evt_type = token_info.get('type')
 playlist = token_info.get('playlist', [])
 
 ```
-
 

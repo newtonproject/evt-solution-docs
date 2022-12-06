@@ -78,45 +78,10 @@ EVT是 Encrypted Variable Token的简称。EVT是由JZ Xu提出的代币标准�
 
   应用集成EVT，例如 Metamask 购买 EVT，Wave客户端发行和交易EVT资产，huobi app交易EVT资产等。
 
-
-
 ### 2. EVT 工作流程
-#### 2.1 概述
-
 - 电影等资源经过切片加密后，上传到IPFS，发行方经过加密通道，将加密密钥交给 NewKeeper，同时在 Newton 上部署电影 EVT 合约。
 
-- 当用户购买 EVT，请求观看电影时，会发送密钥请求给 Newkeeper，Newkeeper 通过智能合约检查用户是否持有 EVT，如果有，返回加密密钥给用户，用户通过 火必客户端、Wave客户端、NewPlayer 播放器等进行解密播放。
-
-#### 2.2 具体流程
-
-- ##### EVT 合约发行
-
-由 EVT-Core 联合资源方发行 EVT， 上传至 IPFS，同时创建 EVT Contact，由合作方同步资源信息至合作方 CDN。
-
-- 
-  ##### Mint EVT
-
-
-由 EVT-Core Mint EVT 到交易所的 NEW 地址。
-
-- 
-  ##### 维护 EVT 播放列表
-
-
-由交易所维护 EVT 播放列表。
-
-- 
-  ##### 用户购买观看权限
-
-
-由交易所在平台购买 `EVT`,交易所服务中心化记账。
-
-- 
-  ##### 用户播放 EVT
-
-
-用户请求交易所服务器进行播放，先有交易所服务器鉴权，通过之后，交易所服务器到 `NewKeeper` 请求播放密钥,请求成功之后，
-将密钥和播放链接返回交易所客户端，客户端将播放内容设置到 `NewPlayer` 进行播放观看。
+- 当用户购买 EVT，请求观看电影时，会发送密钥请求给 Newkeeper，Newkeeper 通过智能合约检查用户是否持有 EVT，如果持有，返回加密密钥给用户，用户通过 火必客户端、Wave客户端、NewPlayer 播放器等进行解密播放。
 
 ## 三. 集成方案
 
@@ -125,28 +90,28 @@ EVT是 Encrypted Variable Token的简称。EVT是由JZ Xu提出的代币标准�
 
 ### 2. 接入指南
 
-- 申请 `app_key` 和 `app_secret`
-- 创建 NEW 钱包，使用该钱包 Mint EVT.(目前由 EVT-Core mint evt 到指定地址)
-- 下载 SDK 并集成到 APP;
+- 向 EVT-Core 申请 App_key 和 App_secret。
+- 创建 NEW 钱包，使用该钱包 Mint EVT（目前由 EVT-Core Mint EVT 到指定地址）。
+- 下载 SDK 并集成到 APP。
 
-#### 1.1 客户端集成 NewPlayer SDK
+#### 2.1 客户端集成 NewPlayer SDK
 
 - [Android-sdk & demo](https://gitlab.weinvent.org/wave/business/wave-websites/evt-player-android)
 - [iOS-sdk & demo](https://gitlab.weinvent.org/wave/business/wave-websites/evt-player-ios)
 
-#### 1.2 服务端接入 `NewKeeper`
+#### 2.2 服务端接入 NewKeeper
 
 [NewKeeper API](https://gitlab.weinvent.org/wave/business/wave-websites/evt-integration-newkeeper)
 
-#### 1.3 相关文档
+#### 2.3 Token URI 解析
 
-[Token Uri](tokenUri.md)
+[Token URI 解析](tokenUri.md)
 
-### 2. 现有EVT方案的通用性和局限性
+### 3. 现有EVT方案的通用性和局限性
 
-通用性：为原创作者、内容运营机构提供了完善的版权保护和变现的通用解决方案。
+通用性：现有EVT方案为原创作者、内容运营机构提供了完善的版权保护和变现的通用解决方案。
 
-局限性：NewPlayer 目前只支持 Android 和 iOS 端，未来增加对 Web 端的支持。
+局限性：NewPlayer 目前只支持 Android 和 iOS 端，未来会增加对 Web 端的支持。
 
 ## 四. EVT Specs
 
