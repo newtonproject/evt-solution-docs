@@ -140,6 +140,10 @@ EVT是 Encrypted Variable Token的简称。EVT是由JZ Xu提出的代币标准�
 
 ### 2. 现有EVT方案的通用性和局限性
 
+通用性：为原创作者、内容运营机构提供了完善的版权保护和变现的通用解决方案。
+
+局限性：NewPlayer 目前只支持 Android 和 iOS 端，未来增加对 Web 端的支持。
+
 ## 四. EVT Specs
 
 [EVT Specs](evt-specs.md)
