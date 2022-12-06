@@ -63,9 +63,6 @@
 - `NewKeeper` 接入文档 @Alen
   - 步骤
   - Demo
-- `NewPlayer` 接入文档 @Pony, @James, @Ouli
-  - 步骤
-  - Demo
 
 ## 三. NewKeepr API（具体API说明）
 
