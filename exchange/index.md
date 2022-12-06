@@ -3,7 +3,7 @@
 ## 1. 介绍
 
 ### 1.1 EVT是什么
-EVT是 Encrypted Variable Token的简称。EVT是由JZ Xu提出的代币标准，用于在元宇宙、数字出版、现实世界中加密可变资产发行。同时，EVT也定义了一套去中心化协议和架构，是Web3的基础设施。
+EVT是 Encrypted Variable Token的简称，EVT可以用于在元宇宙、数字出版、现实世界中加密可变资产发行。同时，EVT也定义了一套去中心化协议和架构。
 
 ### 1.2 EVT vs NFT
 
@@ -109,10 +109,8 @@ EVT是 Encrypted Variable Token的简称。EVT是由JZ Xu提出的代币标准�
    - [iOS SDK & demo](https://gitlab.weinvent.org/weinvent/incubator/evt-integration/evt-player-ios)
 
 
-5. 服务端请求 NewKeeper 获取 Secretkey 并返回到客户端
+5. NewKeeper 授权
    - [NewKeeper API & demo](https://gitlab.weinvent.org/weinvent/incubator/evt-integration/evt-integration-newkeeper)
-
-6. 客户端使用播放链接和 SecretKey 进行解密媒体资源并播放
 
 ### 3.3 媒体资源数据结构
 
