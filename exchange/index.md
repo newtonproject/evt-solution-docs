@@ -20,21 +20,13 @@ EVT(Encrypted Variable Token) 是一个在元宇宙和现实世界可以替代NF
     <td>Encrypted Variable Token</td>
   </tr>
   <tr>
-    <td rowspan = 6>特性</td>
+    <td rowspan = 4>特性</td>
     <td>不可变，不可编程</td>
     <td>数据分为可变部分和不可变部分</td>
   </tr>
   <tr>
-    <td>兼容 NRC7</td>
-    <td>兼容 NRC7</td>
-  </tr>
-  <tr>
     <td>NFT中图片、视频、音频是公开的</td>
     <td>支持多种加密算法，包括AES, ECDSA, RSA, Lattice-Based加密算法等</td>
-  </tr>
-  <tr>
-  	<td>/</td>
-    <td>内建 metadata</td>
   </tr>
   <tr>
     <td>/</td>
@@ -50,6 +42,7 @@ EVT(Encrypted Variable Token) 是一个在元宇宙和现实世界可以替代NF
     <td>电影和音乐版权交易、流媒体、游戏、元宇宙、数字门票等</td>
   </tr>
 </table>
+
 
 ### 3. 应用场景
 
