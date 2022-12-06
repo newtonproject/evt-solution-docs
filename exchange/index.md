@@ -1,4 +1,4 @@
-# 交易所 EVT 集成方案
+# EVT 集成
 
 ## 一. 介绍
 
@@ -20,21 +20,13 @@ EVT(Encrypted Variable Token) 是一个在元宇宙和现实世界可以替代NF
     <td>Encrypted Variable Token</td>
   </tr>
   <tr>
-    <td rowspan = 6>特性</td>
+    <td rowspan = 4>特性</td>
     <td>不可变，不可编程</td>
     <td>数据分为可变部分和不可变部分</td>
   </tr>
   <tr>
-    <td>兼容 NRC7</td>
-    <td>兼容 NRC7</td>
-  </tr>
-  <tr>
     <td>NFT中图片、视频、音频是公开的</td>
     <td>支持多种加密算法，包括AES, ECDSA, RSA, Lattice-Based加密算法等</td>
-  </tr>
-  <tr>
-  	<td>/</td>
-    <td>内建 metadata</td>
   </tr>
   <tr>
     <td>/</td>
@@ -50,6 +42,7 @@ EVT(Encrypted Variable Token) 是一个在元宇宙和现实世界可以替代NF
     <td>电影和音乐版权交易、流媒体、游戏、元宇宙、数字门票等</td>
   </tr>
 </table>
+
 
 ### 3. 应用场景
 
@@ -75,24 +68,13 @@ L4: SDK，部署 EVT，与 Newton 区块链交互
 
 L5: 应用层，第三方集成EVT，例如 Metamask 购买 EVT，Wave客户端发行，NewPlayer 播放器等
 
-### 目前 EVT 使用流程
+### EVT 工作流程
+#### 概述
 
 1、电影等资源经过切片加密后, 上传到IPFS，发行方经过加密通道，将加密密钥交给 NewKeeper, 同时在 Newton 上部署电影 EVT 合约
 
-2、当用户购买 EVT，请求观看电影时，会发送密钥请求给Newkeeper，Newkeeper 通过智能合约检查用户是否持有 EVT，如果有，返回加密密钥给用户，用户通过 火必客户端、Wave客户端、NewPlayer 播放器等进行解密播放
+2、当用户购买 EVT，请求观看电影时，会发送密钥请求给 Newkeeper，Newkeeper 通过智能合约检查用户是否持有 EVT，如果有，返回加密密钥给用户，用户通过 火必客户端、Wave客户端、NewPlayer 播放器等进行解密播放
 
-## 二. 方案集成
-
-![huobi_evt](../res/huobi_evt.png)
-
-- 流程图优化 @Minter
-- `NewKeeper` 接入文档 @Alen
-- `NewPlayer` 接入文档 @Pony, @James, @Ouli
-- 解析 tokenUri demo @wangyifan
-- 媒体资源格式说明文档,   @Alen, @Minter,
-- 文档格式优化  @Jude, @Damon
-
-### 1. 业务流程
 
 #### EVT 合约发行
 
@@ -101,7 +83,7 @@ L5: 应用层，第三方集成EVT，例如 Metamask 购买 EVT，Wave客户端�
 
 #### Mint EVT
 
-由 EVT-Core Mint 一定数量的 EVT 到交易所的 NEW 地址。
+由 EVT-Core Mint EVT 到交易所的 NEW 地址。
 
 
 #### 维护 EVT 播放列表
@@ -109,7 +91,7 @@ L5: 应用层，第三方集成EVT，例如 Metamask 购买 EVT，Wave客户端�
 由交易所维护 EVT 播放列表。
 
 
-#### 用户购买 EVT
+#### 用户购买观看权限
 
 由交易所在平台购买 `EVT`,交易所服务中心化记账。
 
@@ -119,21 +101,19 @@ L5: 应用层，第三方集成EVT，例如 Metamask 购买 EVT，Wave客户端�
 用户请求交易所服务器进行播放，先有交易所服务器鉴权，通过之后，交易所服务器到 `NewKeeper` 请求播放密钥,请求成功之后，
 将密钥和播放链接返回交易所客户端，客户端将播放内容设置到 `NewPlayer` 进行播放观看。
 
+## 二. 方案集成
+
+### 1. 业务流程
+![huobi_evt](../res/huobi_evt.png)
+
 ### 2. 接入示例
 
 [Token Uri](tokenUri.md)
-- 如何解析EVT合约
-  - 解析 tokenUri demo @wangyifan
-  - 媒体资源格式说明文档,   @Alen, @Minter,
 
-- `NewKeeper` 接入文档 @Alen
-  - 步骤
-  - Demo
 
 ## 三. NewKeepr API
 
 [NewKeeper API](newkeeper-api.md)
-
 
 
 ## 四. NewPlayer SDK
