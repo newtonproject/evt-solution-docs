@@ -128,7 +128,7 @@ EVT是 Encrypted Variable Token的简称。EVT是由JZ Xu提出的代币标准�
 
 #### 2.2 服务端接入 `NewKeeper`
 
-[NewKeeper API](newkeeper-api.md)
+[NewKeeper API](https://gitlab.weinvent.org/wave/business/wave-websites/evt-integration-newkeeper)
 
 #### 2.3 相关文档
 
