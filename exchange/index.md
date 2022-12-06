@@ -63,13 +63,13 @@
 - `NewKeeper` 接入文档 @Alen
   - 步骤
   - Demo
-- `NewPlayer` 接入文档 @Pony, @James, @Ouli
-  - 步骤
-  - Demo
 
 ## 三. NewKeepr API（具体API说明）
 
 ## 四. NewPlayer SDK
+
+- [Android-sdk & demo](https://gitlab.weinvent.org/wave/business/wave-websites/evt-player-android)
+- [iOS-sdk & demo](https://gitlab.weinvent.org/wave/business/wave-websites/evt-player-ios)
 
 ## 五. EVT-lib
 
