@@ -1,6 +1,6 @@
 # EVT 集成
 
-## 一. 介绍
+## 1. 介绍
 
 ### 1.1 EVT是什么
 EVT是 Encrypted Variable Token的简称。EVT是由JZ Xu提出的代币标准，用于在元宇宙、数字出版、现实世界中加密可变资产发行。同时，EVT也定义了一套去中心化协议和架构，是Web3的基础设施。
@@ -52,7 +52,7 @@ EVT是 Encrypted Variable Token的简称。EVT是由JZ Xu提出的代币标准�
 
 
 
-## 二. 总体架构
+## 2. 总体架构
 
 ![evt-infrastructure](../res/evt-infrastructure.png)
 
@@ -83,7 +83,7 @@ EVT是 Encrypted Variable Token的简称。EVT是由JZ Xu提出的代币标准�
 
 - 当用户购买 EVT，请求观看电影时，会发送密钥请求给 Newkeeper，Newkeeper 通过智能合约检查用户是否持有 EVT，如果持有，返回加密密钥给用户，用户通过 火必客户端、Wave客户端、NewPlayer 播放器等进行解密播放。
 
-## 三. 集成方案
+## 3. 集成方案
 
 ### 3.1 业务流程
 ![evt_flow](../res/evt-uml.png)
@@ -119,15 +119,15 @@ EVT是 Encrypted Variable Token的简称。EVT是由JZ Xu提出的代币标准�
 
 - 局限性：NewPlayer 目前只支持 Android 和 iOS 端，未来会增加对 Web 端的支持。
 
-## 四. EVT Specs
+## 4. EVT Specs
 
 - [EVT Specs](https://gitlab.weinvent.org/weinvent/incubator/evt-integration/evt-solution-docs/-/blob/master/exchange/evt-specs.md)
 
-## 五. 更新记录
+## 5. 更新记录
 
 - v1 2022-12-07
 
-## 六. 引用
+## 6. 引用
 
 1. https://neps.newtonproject.org/neps/nep-53/
 
