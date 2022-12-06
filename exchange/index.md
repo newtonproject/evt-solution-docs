@@ -87,6 +87,8 @@ EVT是 Encrypted Variable Token的简称。EVT是由JZ Xu提出的代币标准�
 
 - 当用户购买 EVT，请求观看电影时，会发送密钥请求给 Newkeeper，Newkeeper 通过智能合约检查用户是否持有 EVT，如果有，返回加密密钥给用户，用户通过 火必客户端、Wave客户端、NewPlayer 播放器等进行解密播放。
 
+![evt_flow](../res/evt_flow.png)
+
 #### 2.2 具体流程
 
 - ##### EVT 合约发行
@@ -120,26 +122,23 @@ EVT是 Encrypted Variable Token的简称。EVT是由JZ Xu提出的代币标准�
 
 ## 三. 集成方案
 
-### 1. 业务流程
-![evt_flow](../res/evt_flow.png)
-
-### 2. 接入指南
+### 1. 接入指南
 
 
-#### 2.1 客户端集成 NewPlayer SDK
+#### 1.1 客户端集成 NewPlayer SDK
 
 - [Android-sdk & demo](https://gitlab.weinvent.org/wave/business/wave-websites/evt-player-android)
 - [iOS-sdk & demo](https://gitlab.weinvent.org/wave/business/wave-websites/evt-player-ios)
 
-#### 2.2 服务端接入 `NewKeeper`
+#### 1.2 服务端接入 `NewKeeper`
 
 [NewKeeper API](https://gitlab.weinvent.org/wave/business/wave-websites/evt-integration-newkeeper)
 
-#### 2.3 相关文档
+#### 1.3 相关文档
 
 [Token Uri](tokenUri.md)
 
-### 3. 现有EVT方案的通用性和局限性
+### 2. 现有EVT方案的通用性和局限性
 
 ## 四. EVT Specs
 
