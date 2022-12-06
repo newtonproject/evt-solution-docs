@@ -56,7 +56,7 @@ EVT是 Encrypted Variable Token的简称。EVT是由JZ Xu提出的代币标准�
 
 ![evt-infrastructure](../res/evt-infrastructure.png)
 
-### 总体架构介绍
+### 1. 总体架构介绍
 
 * L1: Newton区块链
 
@@ -80,40 +80,45 @@ EVT是 Encrypted Variable Token的简称。EVT是由JZ Xu提出的代币标准�
 
 
 
-### EVT 工作流程
-#### 概述
+### 2. EVT 工作流程
+#### 2.1 概述
 
-1、电影等资源经过切片加密后, 上传到IPFS，发行方经过加密通道，将加密密钥交给 NewKeeper, 同时在 Newton 上部署电影 EVT 合约
+- 电影等资源经过切片加密后，上传到IPFS，发行方经过加密通道，将加密密钥交给 NewKeeper，同时在 Newton 上部署电影 EVT 合约。
 
-2、当用户购买 EVT，请求观看电影时，会发送密钥请求给 Newkeeper，Newkeeper 通过智能合约检查用户是否持有 EVT，如果有，返回加密密钥给用户，用户通过 火必客户端、Wave客户端、NewPlayer 播放器等进行解密播放
+- 当用户购买 EVT，请求观看电影时，会发送密钥请求给 Newkeeper，Newkeeper 通过智能合约检查用户是否持有 EVT，如果有，返回加密密钥给用户，用户通过 火必客户端、Wave客户端、NewPlayer 播放器等进行解密播放。
 
+#### 2.2 具体流程
 
-#### EVT 合约发行
+- ##### EVT 合约发行
 
 由 EVT-Core 联合资源方发行 EVT， 上传至 IPFS，同时创建 EVT Contact，由合作方同步资源信息至合作方 CDN。
 
+- 
+  ##### Mint EVT
 
-#### Mint EVT
 
 由 EVT-Core Mint EVT 到交易所的 NEW 地址。
 
+- 
+  ##### 维护 EVT 播放列表
 
-#### 维护 EVT 播放列表
 
 由交易所维护 EVT 播放列表。
 
+- 
+  ##### 用户购买观看权限
 
-#### 用户购买观看权限
 
 由交易所在平台购买 `EVT`,交易所服务中心化记账。
 
+- 
+  ##### 用户播放 EVT
 
-#### 用户播放 EVT
 
 用户请求交易所服务器进行播放，先有交易所服务器鉴权，通过之后，交易所服务器到 `NewKeeper` 请求播放密钥,请求成功之后，
 将密钥和播放链接返回交易所客户端，客户端将播放内容设置到 `NewPlayer` 进行播放观看。
 
-## 二. 方案集成
+## 三. 集成方案
 
 ### 1. 业务流程
 ![evt_flow](../res/evt_flow.png)
@@ -134,14 +139,16 @@ EVT是 Encrypted Variable Token的简称。EVT是由JZ Xu提出的代币标准�
 
 [Token Uri](tokenUri.md)
 
-## 三. EVT Specs
+### 3. 现有EVT方案的通用性和局限性
+
+## 四. EVT Specs
 
 [EVT Specs](evt-specs.md)
 
-## 四. 更新记录
+## 五. 更新记录
 
-## 五. 引用
+## 六. 引用
 
-https://neps.newtonproject.org/neps/nep-53/
+1. https://neps.newtonproject.org/neps/nep-53/
 
-https://neps.newtonproject.org/neps/nep-7/
+2. https://neps.newtonproject.org/neps/nep-7/
