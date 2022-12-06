@@ -75,11 +75,11 @@ L4: SDK，部署 EVT，与 Newton 区块链交互
 
 L5: 应用层，第三方集成EVT，例如 Metamask 购买 EVT，Wave客户端发行，NewPlayer 播放器等
 
-### 目前 EVT 使用流程
+### EVT 工作流程
 
 1、电影等资源经过切片加密后, 上传到IPFS，发行方经过加密通道，将加密密钥交给 NewKeeper, 同时在 Newton 上部署电影 EVT 合约
 
-2、当用户购买 EVT，请求观看电影时，会发送密钥请求给Newkeeper，Newkeeper 通过智能合约检查用户是否持有 EVT，如果有，返回加密密钥给用户，用户通过 火必客户端、Wave客户端、NewPlayer 播放器等进行解密播放
+2、当用户购买 EVT，请求观看电影时，会发送密钥请求给 Newkeeper，Newkeeper 通过智能合约检查用户是否持有 EVT，如果有，返回加密密钥给用户，用户通过 火必客户端、Wave客户端、NewPlayer 播放器等进行解密播放
 
 ## 二. 方案集成
 
@@ -93,7 +93,7 @@ L5: 应用层，第三方集成EVT，例如 Metamask 购买 EVT，Wave客户端�
 
 #### Mint EVT
 
-由 EVT-Core Mint 一定数量的 EVT 到交易所的 NEW 地址。
+由 EVT-Core Mint EVT 到交易所的 NEW 地址。
 
 
 #### 维护 EVT 播放列表
@@ -101,7 +101,7 @@ L5: 应用层，第三方集成EVT，例如 Metamask 购买 EVT，Wave客户端�
 由交易所维护 EVT 播放列表。
 
 
-#### 用户购买 EVT
+#### 用户购买观看权限
 
 由交易所在平台购买 `EVT`,交易所服务中心化记账。
 
