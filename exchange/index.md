@@ -110,7 +110,7 @@ EVT是 Encrypted Variable Token的简称，EVT可以用于在元宇宙、数字�
 
 5. 服务器端完成 NewKeeper 授权
 
-   - [NewKeeper API & demo](https://gitlab.weinvent.org/weinvent/incubator/evt-integration/evt-integration-newkeeper)
+   - [NewKeeper API & demo](https://github.com/newtonproject/evt-integration-newkeeper)
 
 ### 3.3 媒体资源数据结构
 
