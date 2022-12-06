@@ -87,8 +87,6 @@ EVT是 Encrypted Variable Token的简称。EVT是由JZ Xu提出的代币标准�
 
 - 当用户购买 EVT，请求观看电影时，会发送密钥请求给 Newkeeper，Newkeeper 通过智能合约检查用户是否持有 EVT，如果有，返回加密密钥给用户，用户通过 火必客户端、Wave客户端、NewPlayer 播放器等进行解密播放。
 
-![evt_flow](../res/evt_flow.png)
-
 #### 2.2 具体流程
 
 - ##### EVT 合约发行
