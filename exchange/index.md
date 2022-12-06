@@ -92,15 +92,15 @@ EVT是 Encrypted Variable Token的简称，EVT可以用于在元宇宙、数字�
 
 1. 申请 gitlab 账号
 
-   提供使用者邮箱，以便获取文档和客户端 SDK
+   业务方向 newton-community@newontproject.org 发送开发者邮箱地址，以便下载NewPlayer客户端 SDK。
 
 2. 申请 NewKeeper 使用的 App_key 和 App_secret 
 
-   提供申请信息和邮箱
+   业务方向 newton-community@newontproject.org 发送邮件进行申请。
 
-3. 提供接收 EVT 到 NEW 钱包地址
+3. 创建接收 EVT的NEW 钱包地址
 
-   EVT-Core 铸造 EVT 到该地址，使地址具有从 NewKeeper 获取 SecretKey 的权限
+   EVT创作者将EVT铸造到接收EVT的NEW钱包地址，使该地址成为EVT的属主。
 
 4. 客户端下载 NewPlayer SDK 并集成到 APP
 
