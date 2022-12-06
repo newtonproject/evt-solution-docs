@@ -138,98 +138,95 @@ L5: NewPlayer 播放器、Wave客户端: 负责 EVT 播放
 - [Android-sdk & demo](https://gitlab.weinvent.org/wave/business/wave-websites/evt-player-android)
 - [iOS-sdk & demo](https://gitlab.weinvent.org/wave/business/wave-websites/evt-player-ios)
 
-## 五. Contract
+## 五. EVT Specs
 
-SecureMovie
+### Variable Interfaces
 ```
-SecureMovie is ISecureMovie, EVT, ERC721URIStorage, ERC721Enumerable, Ownable
+interface EVTVariable {
+    /// @dev This emits when token dynamic property added.
+    event DynamicPropertyAdded(bytes32 _propertyId);
 
-event MovieCopyCreate(uint256 indexed movieId);
-event TicketBind(uint256 indexed movieId, address indexed tickets);
-event DefaultURIUpdate(string uri);
+    /// @dev This emits when token dynamic property updated.
+    event DynamicPropertyUpdated(uint256 _tokenId, bytes32 _propertyId, bytes _propertyValue);
 
-function safeMint(address to, uint256 amount) external;
-function getMovieTicketContracts(uint256 movieId) external view returns(address[] memory ticketsSet);
-function tickets2movie(address tickets) external view returns(uint256 movieId);
-function updateDefaultURI(string memory uri) external;
-function registerTicketContract(uint256 movieId, address tickets) external;
-function withdraw()
-function tokenURI(uint256 tokenId)
-```
+    /// @notice Add the dynamic property
+    /// @param _propertyId property ID
+    function addDynamicProperty(bytes32 _propertyId) external payable;
 
-### MovieCopyCreate(uint256 indexed movieId)
+    /// @notice Set the dynamic property
+    /// @param _tokenId token ID
+    /// @param _propertyId property ID
+    /// @param _propertyValue property value
+    function setDynamicProperty(uint256 _tokenId, bytes32 _propertyId, bytes _propertyValue) external payable;
 
-Emitted when `tokenId` EVT is created.
+    /// @notice Set multiple dynamic properties once
+    /// @param _tokenId token ID
+    /// @param _message message
+    function setDynamicProperties(uint256 _tokenId, bytes _message) external payable;
 
-### TicketBind(uint256 indexed movieId, address indexed tickets)
+    /// @notice Retrieve the vale of dynamic property
+    /// @param _tokenId token ID
+    /// @param _propertyId property ID
+    /// @return property value
+    function getDynamicProperty(uint256 _tokenId, bytes32 _propertyId) external view returns (bytes);
 
-Emitted when ticket bind with movie
+    /// @notice Retrieve the all properties including dynamic and static
+    /// @param _tokenId token ID
+    /// @return ids, properties
+    function getDynamicProperties(uint256 _tokenId) external view returns (bytes32[], bytes[]);
 
-### DefaultURIUpdate(string uri)
-Emitted when `defaultURI` Update
-
-### safeMint(address to, uint256 amount)
-
-Batch mint movies.
-
-### getMovieTicketContracts(uint256 movieId) -> string[]
-
-Returns `movieId` to TicketSet.
-
-### tickets2movie(address tickets) -> uint256
-Returns `movieId`
-
-### updateDefaultURI(string memory uri)'
-Update `defaultURI` 
-
-### registerTicketContract(uint256 movieId, address tickets)
-add ticket contract address to `_movie2TicketsSet`
-
-### withdraw()
-withdrawal of balance
-
-### tokenURI(uint256 tokenId)
-Returns token URIStorage.See {IERC721Metadata-tokenURI}.
-
-
-EVT
-```
-EVT is ERC165, ERC721, EVTVariable, IEVT
-
-event DynamicPropertyUpdated(uint256 tokenId, bytes32 propertyId, bytes propertyValue);
-
-function setDynamicProperty(uint256 tokenId, bytes32 propertyId, bytes memory propertyValue) external payable;
-
-function setDynamicProperties(uint256 tokenId, bytes memory message) external payable;
-
-function getProperty(uint256 tokenId, bytes32 propertyId) external view returns (bytes memory propertyValue);
-
-function getProperties(uint256 tokenId) external view returns (bytes32[] memory ids, bytes[] memory properties);
-
-function supportsProperty(bytes32 propertyId) external view returns (bool);
+    /// @notice Check whether support the given property
+    /// @param _propertyId property ID
+    /// @return support or unsupport
+    function supportsProperty(bytes32 _propertyId) external view returns (bool);
+}
 ```
 
-### event DynamicPropertyUpdated(uint256 tokenId, bytes32 propertyId, bytes propertyValue)
-Emitted when dynamic property updated.
+### Encryption Interfaces
+```
+interface EVTEncryption {
+​    /// @notice This emits when registered a encrypted key.
+​    /// @param _tokenId token ID
+​    /// @param _encryptedKeyId encrypted key ID
+​    event EncryptedKeyRegistered(uint256 indexed _tokenId, bytes32 _encryptedKeyId);
 
-### setDynamicProperty(uint256 tokenId, bytes32 propertyId, bytes memory propertyValue) external payable
-@dev Set the `propertyValue` by `tokenId` and `propertyId`.
-propertyId = bytes32(keccak256('propertyName')) 
-Requirements:
- - `tokenId` must exist.
+    /// @notice This emits when add a permission.
+​    /// @param _tokenId token ID
+​    /// @param _encryptedKeyId encrypted key ID
+​    /// @param _licensee licensee
+​    event PermissionAdded(uint256 indexed _tokenId, bytes32 _encryptedKeyId, address indexed _licensee);
 
-### getProperty(uint256 tokenId, bytes32 propertyId) -> bytes
-Returns the `propertyValue` of the `propertyId` token.
-Requirements:
-- `tokenId` must exist.
+    /// @notice This emits when remove a permission.
+​    /// @param _tokenId token ID
+​    /// @param _encryptedKeyId encrypted key ID
+​    /// @param _licensee licensee
+​    event PermissionRemoved(uint256 indexed _tokenId, bytes32 _encryptedKeyId, address indexed _licensee);
 
-### getProperties(uint256 tokenId) -> bytes32[], bytes[]
-Batch returns the tokenIds and properties of the `tokenId` token.
-Requirements:
- - `tokenId` must exist.
+    /// @notice Register encrypted key
+    /// @param _tokenId token ID
+    /// @param _encryptedKeyId encrypted key ID
+    function registerEncryptedKey(uint256 _tokenId, bytes32 _encryptedKeyId) external payable;
 
-### supportsProperty(bytes32 propertyId) -> bool
-Returns whether the `propertyId` exists.
+    /// @notice Add the permission rule of the encrypted key for given address
+    /// @param _tokenId token ID
+    /// @param _encryptedKeyId encrypted key ID
+    /// @param _licensee licensee
+    function addPermission(uint256 _tokenId, bytes32 _encryptedKeyId, address _licensee) external payable;
+
+    /// @notice Remove the permission rule of the encrypted key for given address
+    /// @param _tokenId token ID
+    /// @param _encryptedKeyId encrypted key ID
+    /// @param _licensee licensee
+    function removePermission(uint256 _tokenId, bytes32 _encryptedKeyId, address _licensee) external;
+
+    /// @notice Check permission rule of the encrypted key for given address
+    /// @param _tokenId token ID
+    /// @param _encryptedKeyId encrypted key ID
+    /// @param _licensee licensee
+    /// @return true or false
+    function hasPermission(uint256 _tokenId, bytes32 _encryptedKeyId, address _licensee) external view returns (bool);
+}
+```
 
 ### ERC721，ERC721URIStorage，ERC721Enumerable，Ownable
 For common methods, see ERC721，ERC721URIStorage，ERC721Enumerable，Ownable.
