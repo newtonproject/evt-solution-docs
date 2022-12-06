@@ -83,16 +83,8 @@ L5: 应用层，第三方集成EVT，例如 Metamask 购买 EVT，Wave客户端�
 
 ## 二. 方案集成
 
-![huobi_evt](../res/huobi_evt.png)
-
-- 流程图优化 @Minter
-- `NewKeeper` 接入文档 @Alen
-- `NewPlayer` 接入文档 @Pony, @James, @Ouli
-- 解析 tokenUri demo @wangyifan
-- 媒体资源格式说明文档,   @Alen, @Minter,
-- 文档格式优化  @Jude, @Damon
-
 ### 1. 业务流程
+![huobi_evt](../res/huobi_evt.png)
 
 #### EVT 合约发行
 
@@ -126,14 +118,10 @@ L5: 应用层，第三方集成EVT，例如 Metamask 购买 EVT，Wave客户端�
   - 解析 tokenUri demo @wangyifan
   - 媒体资源格式说明文档,   @Alen, @Minter,
 
-- `NewKeeper` 接入文档 @Alen
-  - 步骤
-  - Demo
 
 ## 三. NewKeepr API
 
 [NewKeeper API](newkeeper-api.md)
-
 
 
 ## 四. NewPlayer SDK
