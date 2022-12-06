@@ -1,6 +1,6 @@
 ## tokenUri 解析
 
-#### token_uri 解析出的 metajson 格式
+#### token_uri 解析出的 metadata json 格式
 
 ```python
 {
