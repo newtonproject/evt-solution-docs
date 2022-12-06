@@ -114,7 +114,7 @@ EVT是 Encrypted Variable Token的简称，EVT可以用于在元宇宙、数字�
 
 ### 3.3 媒体资源数据结构
 
-- [媒体资源数据结构](https://gitlab.weinvent.org/weinvent/incubator/evt-integration/evt-solution-docs/-/blob/master/exchange/media-data-struct.md)
+- [媒体资源数据结构](./media-data-struct.md)
 
 ### 3.4 现有EVT方案的通用性和局限性
 
